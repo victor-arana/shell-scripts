@@ -1,0 +1,8 @@
+#!/bin/bash
+last_modified_file_2=$(ls -holt ~/Downloads | head -n2 | tail -n1 | awk '{print $8}')
+source_directory=$(find ~/Downloads -name $last_modified_file_2)
+target_directory=$(pwd)
+filename=$1
+target=$target_directory/$filename.jpg
+echo "Moving: "$source_directory" to: "$target
+mv $source_directory $target
