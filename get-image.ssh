@@ -1,6 +1,17 @@
 #!/bin/bash
-last_modified_file_2=$(ls -holt ~/Downloads | head -n2 | tail -n1 | awk '{print $8}')
-source_directory=$(find ~/Downloads -name $last_modified_file_2)
+# Moves the last modified file from the Downloads directory to the current
+# directory.
+#
+# 1. Get the list of files in the Downloads directory
+# 2. Get the lines between lines 2 and total_lines -1
+# 3. Select the 8 column from the line obtained which contains the filename
+# ls options:
+#   - h: Human readable
+#   - o: 
+#   - l: Long format
+#   - t: Sort by modification time
+last_modified_file=$(ls -holt ~/Downloads | head -n2 | tail -n1 | awk '{print $8}')
+source_directory=$(find ~/Downloads -name $last_modified_file)
 target_directory=$(pwd)
 filename=$1
 target=$target_directory/$filename.jpg
