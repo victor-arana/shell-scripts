@@ -24,7 +24,7 @@ echo "export PATH=$PATH" >> ~/.bashrc
 sudo apt install -y curl
 
 # Install IntelliJ
-sudo snap install intellij-idea-community --channel=2020.1/stable --classic
+snap install intellij-idea-community --channel=2020.1/stable --classic
 
 cd
 sudo rm -rf .cache/JetBrains/IdeaIC2020.1/
