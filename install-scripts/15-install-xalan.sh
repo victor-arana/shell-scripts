@@ -3,5 +3,5 @@ sudo wget -P /opt https://downloads.apache.org/xalan/xalan-j/binaries/xalan-j_2_
 sudo unzip /opt/xalan-j_2_7_2-bin.zip -d /opt
 sudo rm /opt/xalan-j_2_7_2-bin.zip
 
-CLASSPATH="/opt/xalan-j_2_7_2/xalan.jar"
+CLASSPATH="/opt/xalan-j_2_7_2/*"
 echo "export CLASSPATH=$CLASSPATH" >> ~/.bashrc
