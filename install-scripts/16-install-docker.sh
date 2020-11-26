@@ -1,4 +1,6 @@
 #!/bin/bash
+# exit when any command fails
+set -e
 # Update existing list of packages
 sudo apt-get update
 # Install prerequisite packages in order to use packages over HTTPS
