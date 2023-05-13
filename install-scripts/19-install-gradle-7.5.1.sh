@@ -14,8 +14,10 @@ sudo ln -s /opt/gradle/gradle-${VERSION} /opt/gradle/latest
 # Set environment variables
 sudo touch /etc/profile.d/gradle.sh
 sudo chmod +x /etc/profile.d/gradle.sh
+export GRADLE_HOME=/opt/gradle/latest
+export PATH=/opt/gradle/latest/bin:${PATH}
 echo "export GRADLE_HOME=/opt/gradle/latest" | sudo tee -a /etc/profile.d/gradle.sh
-echo "export PATH=${GRADLE_HOME}/bin:${PATH}" | sudo tee -a /etc/profile.d/gradle.sh
+echo "export PATH=/opt/gradle/latest/bin:${PATH}" | sudo tee -a /etc/profile.d/gradle.sh
 # Load the environment variables in the current shell session
 source /etc/profile.d/gradle.sh
 # Verify the Gradle installation
