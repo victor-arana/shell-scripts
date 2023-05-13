@@ -5,3 +5,4 @@
 ../install-scripts/03-install-chrome.sh
 ../install-scripts/10-install-vim.sh
 ../install-scripts/02-install-java-jdk-17.sh
+../install-scripts/19-install-gradle-7.5.1.sh
